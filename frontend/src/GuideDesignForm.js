@@ -52,7 +52,7 @@ export class GuideDesignForm extends React.Component {
           multiline
           fullWidth
           maxRows={6}
-          label="Enter Guide Sequence"
+          label="Enter Transcript Sequence"
           value={this.state.value}
           onChange={this.handleChange}
           color="secondary"
