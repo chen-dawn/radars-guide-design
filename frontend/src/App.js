@@ -29,8 +29,10 @@ const TitleBar = (props) => {
           <Link
             color="inherit"
             href="https://www.biorxiv.org/content/10.1101/2022.01.26.477951v1"
+            target="_blank"
+            rel="noopener"
           >
-            {" Link to our BioRxiv manuscript."}
+            {"Link to our BioRxiv manuscript."}
           </Link>
         </Typography>
       </Box>
