@@ -3,30 +3,29 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 
 function GuideTable(props) {
   const columns = [
-    { field: "id", headerName: "ID", width: 90 },
-    { field: "pos", headerName: "Position", width: 90 },
     {
       field: "guideName",
       headerName: "Guide Name",
       width: 150,
       editable: false,
     },
+    { field: "pos", headerName: "Position", width: 90 },
     {
       field: "generatedGuide",
       headerName: "Generated Guide",
-      width: 300,
-      editable: false,
+      width: 290,
+      editable: true,
     },
     {
       field: "guideTarget",
       headerName: "Target Sequence",
-      width: 300,
-      editable: false,
+      width: 280,
+      editable: true,
     },
   ];
 
   return (
-    <div style={{ height: 800, width: "100%" }}>
+    <div style={{ height: 600, width: "100%" }}>
       <DataGrid
         rows={props.rows}
         columns={columns}

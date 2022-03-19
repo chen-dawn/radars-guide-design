@@ -194,7 +194,7 @@ def get_guide_candidates_5avidity_webapp(target, name_prefix="guide", length=51)
         # if guide_has_target_stretch(mutated_guide):
         #     continue
 
-        guide_name = "{}_CCA_{}_pos_{}_5avidity".format(
+        guide_name = "{}{}_CCA{}".format(
             name_prefix, guide_counter, CCA_pos
         )
 
