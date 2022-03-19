@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import GuideTable from "./GuideTable";
 import { Box } from "@mui/material";
-
+import "./App.css";
 export class GuideDesignForm extends React.Component {
   constructor(props) {
     super(props);
@@ -43,25 +43,32 @@ export class GuideDesignForm extends React.Component {
 
   render() {
     return (
-      <Box>
+      <><Box sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+      }}>
         <TextField
           multiline
           fullWidth
-          maxRows={4}
+          maxRows={6}
           label="Enter Guide Sequence"
           value={this.state.value}
           onChange={this.handleChange}
           color="secondary"
-        />
-        <div>
-          <Button onClick={this.handleSubmit}>Submit</Button>
-        </div>
-        <div>
+          sx={{ mb: 1 }} />
+        <Box fullWidth sx={{
+          p: "5"
+        }}>
+          <Button variant="outlined" onClick={this.handleSubmit} size="large" sx={{ m: 1 }}>Submit</Button>
+        </Box>
+      </Box>
+      <Box sx={{ mt: 3 }}>
+          
           {this.state.rows === "" ? null : (
             <GuideTable rows={this.state.rows} />
           )}
-        </div>
-      </Box>
+        </Box></>
     );
   }
 }
