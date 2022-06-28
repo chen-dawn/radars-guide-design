@@ -45,7 +45,7 @@ export default function App() {
 
   useEffect(() => {
     axios
-      .get("https://radars-guide-design.herokuapp.com/tools/generate")
+      .get("http://www.radars.bio/tools/generate")
       .then((response) => {
         console.log("SUCCESS", response);
         setGetMessage(response);

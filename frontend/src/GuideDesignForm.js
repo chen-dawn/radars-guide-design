@@ -23,7 +23,7 @@ export class GuideDesignForm extends React.Component {
     // POST request using axios with error handling
     const guideSequence = { sequence: this.state.value };
     axios
-      .post("https://radars-guide-design.herokuapp.com/tools/generate", guideSequence, {
+      .post("http://www.radars.bio/tools/generate", guideSequence, {
         headers: {
           // Overwrite Axios's automatically set Content-Type
           "Content-Type": "application/json",
