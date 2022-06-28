@@ -9,6 +9,14 @@ import { GuideDesignForm } from "./GuideDesignForm";
 import logo from "./logo.png";
 import "./App.css";
 
+function Copyright() {
+  return (
+    <Typography variant="body2" color="text.secondary" align="center">
+      {'Created by Dawn Chen, last updated June 2022'}
+    </Typography>
+  );
+}
+
 const TitleBar = (props) => {
   return (
     <Box sx={{ my: 4, borderRadius: 1 }} id="Branding">
@@ -61,6 +69,7 @@ export default function App() {
       <div className="guide-design-form">
         <GuideDesignForm />
       </div>
+      <Copyright/>
     </Container>
   );
 }
