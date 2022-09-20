@@ -12,7 +12,7 @@ import "./App.css";
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {'Created by Dawn Chen, last updated June 2022'}
+      {'Created by Dawn Chen, last updated Sept 2022'}
     </Typography>
   );
 }
@@ -31,18 +31,49 @@ const TitleBar = (props) => {
           RADARS Guide Design Tool
         </Typography>
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <Typography component="h1" color="text.secondary" gutterBottom>
+      <Box sx={{display: "flex", justifyContent: "center" }}>
+        <Typography component="h3" color="primary.secondary" gutterBottom sx={{ marginBottom: 2, marginTop:-1 }} >
           {"Design RADARS Guides for your favourite transcript. "}
-          <Link
+        </Typography>
+      </Box>
+      <Box sx={{display: "flex", justifyContent: "center"}}>
+        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2}} >
+        <Link
             color="inherit"
             href="https://www.biorxiv.org/content/10.1101/2022.01.26.477951v1"
             target="_blank"
             rel="noopener"
           >
-            {"Link to our BioRxiv manuscript."}
+            {"BioRxiv"}
           </Link>
         </Typography>
+        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2 }} >
+        &#9679;
+        </Typography>
+        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2 }}>
+          <Link
+            color="inherit"
+            href="https://github.com/abugoot-lab/RADARS"
+            target="_blank"
+            rel="noopener"
+          >
+            {"Github"}
+          </Link>
+        </Typography>
+        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2 }} >
+        &#9679;
+        </Typography>
+        <Typography variant="h5" component="body1"  color="primary.main">
+          <Link
+            color="inherit"
+            href="https://groups.google.com/g/radars"
+            target="_blank"
+            rel="noopener"
+          >
+            {"Google Group"}
+          </Link>
+        </Typography>
+
       </Box>
     </Box>
   );
