@@ -95,12 +95,14 @@ export default function App() {
   }, []);
 
   return (
-    <Container maxWidth="md" id="app">
-      <TitleBar />
-      <div className="guide-design-form">
-        <GuideDesignForm />
-      </div>
-      <Copyright/>
-    </Container>
+    <>
+      <Container maxWidth="md" id="app">
+        <TitleBar />
+        <div className="guide-design-form">
+          <GuideDesignForm />
+        </div>
+        <Copyright/>
+      </Container>
+    </>
   );
 }
