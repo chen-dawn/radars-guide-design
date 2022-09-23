@@ -33,7 +33,7 @@ const TitleBar = (props) => {
       </Box>
       <Box sx={{display: "flex", justifyContent: "center" }}>
         <Typography component="h3" color="primary.secondary" gutterBottom sx={{ marginBottom: 2, marginTop:-1 }} >
-          {"Design RADARS uides for your favourite transcript. "}
+          {"Design RADARS guides for your favourite transcript. "}
         </Typography>
       </Box>
     </Box>
