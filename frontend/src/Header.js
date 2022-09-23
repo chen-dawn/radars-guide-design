@@ -35,30 +35,31 @@ export default function Header() {
           <Box sx={{ flexGrow: 1 }} display="flex">
             <MenuItem component={Link} to='/'>Home</MenuItem>
             <MenuItem component={Link} to='/about'>About</MenuItem>
+            <MenuItem component={Link} to='/guide-design-tips'>Guide Design Tips</MenuItem>
           </Box>
-          <Button 
-            color="inherit" 
-            href="https://github.com/abugoot-lab/RADARS" 
-            target="_blank" 
+          <Button
+            color="inherit"
+            href="https://www.biorxiv.org/content/10.1101/2022.01.26.477951v1"
+            target="_blank"
             rel="noopener"
           >
-            GitHub
+            Publication
           </Button>
-                    <Button 
-            color="inherit" 
-            href="https://www.biorxiv.org/content/10.1101/2022.01.26.477951v1" 
-            target="_blank" 
-            rel="noopener"
-          >
-            BioRxiv
-          </Button>
-                    <Button 
-            color="inherit" 
-            href="https://groups.google.com/g/radars" 
-            target="_blank" 
+          <Button
+            color="inherit"
+            href="https://groups.google.com/g/radars"
+            target="_blank"
             rel="noopener"
           >
             Google Group
+          </Button>
+          <Button
+            color="inherit"
+            href="https://github.com/abugoot-lab/RADARS"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
           </Button>
         </Toolbar>
       </AppBar>
