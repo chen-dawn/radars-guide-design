@@ -19,61 +19,22 @@ function Copyright() {
 
 const TitleBar = (props) => {
   return (
-    <Box sx={{ my: 4, borderRadius: 1 }} id="Branding">
+    <Box sx={{ my: 4, borderRadius: 1, marginBottom:3 }} id="Branding">
       <Box sx={{ display: "flex", justifyContent: "center", p: 1 }}>
         <img alt="logo" src={logo} width="48" height="48" />
         <Typography
           variant="h4"
           component="h1"
           gutterBottom
-          sx={{ pt: 0.5, pl: 2 }}
+          sx={{ pt: 0.5 }}
         >
           RADARS Guide Design Tool
         </Typography>
       </Box>
       <Box sx={{display: "flex", justifyContent: "center" }}>
         <Typography component="h3" color="primary.secondary" gutterBottom sx={{ marginBottom: 2, marginTop:-1 }} >
-          {"Design RADARS Guides for your favourite transcript. "}
+          {"Design RADARS uides for your favourite transcript. "}
         </Typography>
-      </Box>
-      <Box sx={{display: "flex", justifyContent: "center"}}>
-        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2}} >
-        <Link
-            color="inherit"
-            href="https://www.biorxiv.org/content/10.1101/2022.01.26.477951v1"
-            target="_blank"
-            rel="noopener"
-          >
-            {"BioRxiv"}
-          </Link>
-        </Typography>
-        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2 }} >
-        &#9679;
-        </Typography>
-        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2 }}>
-          <Link
-            color="inherit"
-            href="https://github.com/abugoot-lab/RADARS"
-            target="_blank"
-            rel="noopener"
-          >
-            {"Github"}
-          </Link>
-        </Typography>
-        <Typography  variant="h5" component="body1"  color="primary.main" sx={{ marginRight: 2 }} >
-        &#9679;
-        </Typography>
-        <Typography variant="h5" component="body1"  color="primary.main">
-          <Link
-            color="inherit"
-            href="https://groups.google.com/g/radars"
-            target="_blank"
-            rel="noopener"
-          >
-            {"Google Group"}
-          </Link>
-        </Typography>
-
       </Box>
     </Box>
   );
