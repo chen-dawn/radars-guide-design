@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcreate_react_app=self.webpackChunkcreate_react_app||[]).push([[363],{3363:function(e,a,t){e.exports=t.p+"static/media/about.76b54200fc22db2e04a6.md"}}]);
