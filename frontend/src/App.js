@@ -19,7 +19,7 @@ function Copyright() {
 
 const TitleBar = (props) => {
   return (
-    <Box sx={{ my: 4, borderRadius: 1, marginBottom:3 }} id="Branding">
+    <Box sx={{ my: 4, borderRadius: 1, marginBottom: 3 }} id="Branding">
       <Box sx={{ display: "flex", justifyContent: "center", p: 1 }}>
         <img alt="logo" src={logo} width="48" height="48" />
         <Typography
@@ -31,8 +31,8 @@ const TitleBar = (props) => {
           RADARS Guide Design Tool
         </Typography>
       </Box>
-      <Box sx={{display: "flex", justifyContent: "center" }}>
-        <Typography component="h3" color="primary.secondary" gutterBottom sx={{ marginBottom: 2, marginTop:-1 }} >
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Typography component="h3" color="primary.secondary" gutterBottom sx={{ marginBottom: 2, marginTop: -1 }} >
           {"Design RADARS guides for your favourite transcript. "}
         </Typography>
       </Box>
@@ -62,7 +62,7 @@ export default function App() {
         <div className="guide-design-form">
           <GuideDesignForm />
         </div>
-        <Copyright/>
+        <Copyright />
       </Container>
     </>
   );
