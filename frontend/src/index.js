@@ -4,7 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import App from './App';
 import theme from './theme';
-
+import Copyright from './Copyright.js';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -30,6 +30,15 @@ const router = createBrowserRouter([
       <>
         <Header />
         <MarkdownRenderer filename='about.md' />
+      </>
+    ),
+  },
+  {
+    path: "guide-design-tips",
+    element: (
+      <>
+        <Header />
+        <MarkdownRenderer filename='guide-design-tips.md' />
       </>
     ),
   },
