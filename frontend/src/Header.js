@@ -39,7 +39,7 @@ export default function Header() {
           </Box>
           <Button
             color="inherit"
-            href="https://www.biorxiv.org/content/10.1101/2022.01.26.477951v1"
+            href="https://www.nature.com/articles/s41587-022-01534-5"
             target="_blank"
             rel="noopener"
           >
