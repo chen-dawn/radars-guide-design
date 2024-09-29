@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcreate_react_app=self.webpackChunkcreate_react_app||[]).push([[910],{5910:function(e,a,t){e.exports=t.p+"static/media/guide-design-tips.6400fa82c50ddfb56938.md"}}]);

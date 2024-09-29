@@ -12,7 +12,7 @@ import "./App.css";
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {'Created by Dawn Chen, last updated Sept 2022'}
+      {'Created by Dawn Chen, last updated Sept 2024'}
     </Typography>
   );
 }
