@@ -1,16 +1,25 @@
 from __future__ import print_function
-from flask import Flask, send_from_directory
+from flask import Flask, redirect, request, send_from_directory
 from flask_restful import Api
 from flask_cors import CORS
 from api.GenerateGuidesApiHandler import GenerateGuidesApiHandler
 import os
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
 # Enable CORS for all routes in both development and production
 CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all origins
 
 api = Api(app)
+
+
+@app.before_request
+def enforce_https():
+    if os.environ.get('DYNO') and not request.is_secure:
+        secure_url = request.url.replace('http://', 'https://', 1)
+        return redirect(secure_url, code=301)
 
 def serve_react_app(path=''):
     requested_path = os.path.join(app.static_folder, path)
