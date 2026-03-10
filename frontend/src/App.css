@@ -1,3 +1,228 @@
-.submit-button{
-    width: 300;
+:root {
+  --bg-top: #f8fbff;
+  --bg-bottom: #edf3fb;
+  --ink: #1a2a3a;
+  --muted: #5a6b7f;
+  --panel: rgba(255, 255, 255, 0.96);
+  --panel-strong: #ffffff;
+  --line: rgba(18, 59, 122, 0.12);
+  --accent: #2f6fd6;
+  --accent-deep: #123b7a;
+  --accent-soft: #dce9fb;
+  --nav: rgba(255, 255, 255, 0.94);
+  --shadow: 0 14px 36px rgba(19, 34, 58, 0.08);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(47, 111, 214, 0.04) 0%, rgba(47, 111, 214, 0) 18%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  min-height: 100vh;
+}
+
+.app-shell {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.site-nav {
+  background: var(--nav) !important;
+  border-bottom: 1px solid rgba(18, 59, 122, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.site-toolbar {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 64px;
+}
+
+.site-nav-links,
+.site-nav-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.site-nav .MuiMenuItem-root,
+.site-nav .MuiButton-root {
+  color: #35506f;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.site-nav .MuiMenuItem-root:hover,
+.site-nav .MuiButton-root:hover {
+  background: rgba(18, 59, 122, 0.06);
+  color: var(--accent-deep);
+}
+
+.title-shell {
+  padding: 1.5rem 1.75rem;
+  border-radius: 6px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 248, 255, 0.92)) !important;
+  border: 1px solid rgba(18, 59, 122, 0.08);
+  box-shadow: 0 10px 24px rgba(19, 34, 58, 0.05);
+  text-align: left;
+  position: relative;
+}
+
+.title-shell::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  bottom: 1.2rem;
+  width: 5px;
+  background: linear-gradient(180deg, var(--accent-deep), var(--accent));
+}
+
+.simple-title {
+  margin-bottom: 0.35rem !important;
+  padding-left: 1rem;
+}
+
+.simple-subtitle {
+  color: var(--muted);
+  font-size: 0.98rem !important;
+  padding-left: 1rem;
+}
+
+.form-shell {
+  margin-top: 0.25rem;
+  padding: 1.5rem 1.75rem 1.75rem;
+  border-radius: 6px !important;
+  background: var(--panel-strong) !important;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.form-shell-header {
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(18, 59, 122, 0.08);
+}
+
+.form-shell-header .MuiTypography-body2 {
+  color: var(--muted);
+}
+
+.guide-form-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sequence-input .MuiOutlinedInput-root {
+  border-radius: 4px;
+  background: #fbfdff;
+}
+
+.sequence-input .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(18, 59, 122, 0.18) !important;
+}
+
+.form-actions {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.submit-button {
+  min-width: 180px;
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 4px !important;
+  background: var(--accent-deep) !important;
+  color: #f8fbff !important;
+  box-shadow: 0 6px 16px rgba(18, 59, 122, 0.16);
+}
+
+.submit-button:hover {
+  background: #0f3269 !important;
+}
+
+.preview-button {
+  color: var(--accent-deep) !important;
+}
+
+.results-shell {
+  margin-top: 1.5rem;
+}
+
+.empty-results {
+  padding: 1rem 1.1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(18, 59, 122, 0.12);
+  background: linear-gradient(180deg, #fafcff 0%, #f4f8ff 100%);
+}
+
+.empty-results .MuiTypography-h6 {
+  margin-bottom: 0.35rem;
+}
+
+.error-banner {
+  margin-bottom: 1rem !important;
+  padding: 0.8rem 0.9rem;
+  border-radius: 4px;
+  background: rgba(197, 59, 44, 0.08);
+  border: 1px solid rgba(197, 59, 44, 0.16);
+}
+
+.results-table-shell {
+  height: 600px;
+  width: 100%;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid rgba(18, 59, 122, 0.1);
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(19, 34, 58, 0.06);
+}
+
+.footer-copy {
+  margin-top: 1.5rem !important;
+  color: var(--muted) !important;
+}
+
+@media (max-width: 900px) {
+  .site-toolbar {
+    width: calc(100% - 20px);
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .title-shell,
+  .form-shell {
+    padding: 1rem;
+    border-radius: 6px !important;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }

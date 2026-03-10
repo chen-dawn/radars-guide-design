@@ -18,7 +18,7 @@ export default function MarkdownRenderer(props) {
                     .catch(err => console.log(err));
             })
             .catch(err => console.log(err));
-    });
+    }, [props.filename]);
 
     return (
       <Container maxWidth="md" id="app">

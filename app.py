@@ -12,16 +12,23 @@ CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all origins
 
 api = Api(app)
 
-# Serve React app for different routes
-@app.route('/')
-@app.route('/about')
-@app.route('/guide-design-tips')
-def serve_index():
+def serve_react_app(path=''):
+    requested_path = os.path.join(app.static_folder, path)
+    if path and os.path.exists(requested_path):
+        return send_from_directory(app.static_folder, path)
     return send_from_directory(app.static_folder, 'index.html')
+
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_frontend(path):
+    if path.startswith('tools/'):
+        return {'message': 'Not found'}, 404
+    return serve_react_app(path)
 
 # API endpoint for generating guides
 api.add_resource(GenerateGuidesApiHandler, '/tools/generate')
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5001))  # Change 5000 to 5001
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
