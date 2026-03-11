@@ -9,10 +9,10 @@ from Bio.Seq import Seq
 import re
 
 
-ms2_seq1 = "agacatgaggatcacccatgt"
-ms2_seq2 = "aagggtggaggaacaccccaccct"
-ms2_seq3 = "acagaagcaccatcagggcttctg"
-ms2_seq4 = "gtgcgtggagcatcagcccacgca"
+ms2_seq1 = "acagaagcaccatcagggcttctg"
+ms2_seq2 = "atgacgcaggaccaccgcgtc"
+ms2_seq3 = "agacatgaggatcacccatgt"
+ms2_seq4 = "aagggtggaggaacaccccaccct"
 ms2_seq5 = "tcgacgcaggaccaccgcgtc"
 ms2_seq6 = "agcgcagaggaacaccctgcg"
 ms2_seq7 = "acgggtggaggatcaccccacccg"
